@@ -16,7 +16,7 @@ public class FizzBuzz {
         return isFizz(i) && isBuzz(i);
     }
 
-    public List<String> output(List<Integer> ints) {
+    public List<String> generateStrings(List<Integer> ints) {
         List<String> result = new ArrayList<>();
         for (Integer i : ints) {
             if (isFizzBuzz(i)) {
@@ -33,6 +33,6 @@ public class FizzBuzz {
     }
 
     public static void main(String[] args) {
-        new FizzBuzz().output(IntStream.range(1,101).boxed().toList()).forEach(System.out::println);
+        new FizzBuzz().generateStrings(IntStream.range(1,101).boxed().toList()).forEach(System.out::println);
     }
 }

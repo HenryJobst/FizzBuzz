@@ -29,6 +29,10 @@ class FizzBuzzTest {
 
     @Test
     void outputTest() {
-        assertEquals(List.of("1","2","Fizz","4","Buzz","Fizz","7","FizzBuzz"), fizzBuzz.output(List.of(1,2,3,4,5,6,7,15)));
+        final List<String> expected = List.of("1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "FizzBuzz");
+
+        final List<String> actual = fizzBuzz.generateStrings(List.of(1, 2, 3, 4, 5, 6, 7, 15));
+
+        assertEquals(expected, actual);
     }
 }
